@@ -5,7 +5,7 @@ Benchmarks for scripting languages you can embed in a Rust host, measuring both 
 - **Boot**: what a short-lived CLI pays (whole-process wall time via hyperfine, in-process engine create+eval+drop, stripped binary size)
 - **Throughput**: what a long-running app pays (fib(30), a 10M integer loop, string building, script→Rust and Rust→script call overhead)
 
-Full results and methodology: [RESULTS.md](RESULTS.md). Measured on an Apple M5, rustc 1.96, 2026-10-27.
+Survey of the wider landscape (cited numbers, interop, ecosystem reuse, picks by use case): [REPORT.md](REPORT.md). Full results and methodology: [RESULTS.md](RESULTS.md). Measured on an Apple M5, rustc 1.96, 2026-10-27.
 
 ## Engines
 
