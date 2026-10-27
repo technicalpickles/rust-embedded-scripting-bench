@@ -38,4 +38,4 @@ for b in target/release/boot_* target/release/bench_*; do
   [[ -x $b && ! -d $b ]] || continue
   printf "%s\t%s\n" "$(basename "$b")" "$(wc -c < "$b" | tr -d " ")" >> "$OUT/sizes.tsv"
 done
-otool -L target/release/boot_pyo3 > "$OUT/pyo3_otool.txt"
+if command -v otool > /dev/null; then otool -L target/release/boot_pyo3 > "$OUT/pyo3_otool.txt"; fi

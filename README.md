@@ -53,11 +53,17 @@ Plus a native Rust baseline. V8/deno_core isn't included (build weight).
 
 ## Running
 
-Needs `hyperfine` and, for the pyo3 engine, a CPython 3.13 with a shared `libpython`.
+Tested on macOS (Apple Silicon) only. Needs Rust 1.96+, `hyperfine`, and, for the pyo3 engine, a CPython 3.13 with a shared `libpython` (python-build-standalone via mise or uv works; `PYO3_PYTHON` picks the interpreter).
+
+The published numbers are three passes, aggregated:
 
 ```bash
-./run_all.sh            # build each engine, in-process benches, hyperfine, sizes
-python3 aggregate.py    # build the tables
+PASS=1 ./run_all.sh
+PASS=2 SKIP_BUILD=1 ./run_all.sh
+PASS=3 SKIP_BUILD=1 ./run_all.sh
+python3 aggregate.py > results/tables.md
 ```
 
-`SKIP_BUILD=1`, `SKIP_INPROC=1`, `PASS=n` and `HF_RUNS=n` tune `run_all.sh`. The mlua flavors are built one crate at a time because their features can't unify in one build.
+`RESULTS.md` is `results/header.md`, `headline.md`, `tables.md` and `footer.md` stitched together, with the headline and caveats written by hand. `SKIP_INPROC=1` skips the in-process benches and `HF_RUNS=n` changes the hyperfine run count.
+
+Each engine is its own crate, built one at a time, because the mlua flavors' features can't unify in a single build. `wasmtime` is pinned to 49 because 50 needs rustc 1.97.
