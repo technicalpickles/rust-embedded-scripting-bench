@@ -67,3 +67,7 @@ python3 aggregate.py > results/tables.md
 `RESULTS.md` is `results/header.md`, `headline.md`, `tables.md` and `footer.md` stitched together, with the headline and caveats written by hand. `SKIP_INPROC=1` skips the in-process benches and `HF_RUNS=n` changes the hyperfine run count.
 
 Each engine is its own crate, built one at a time, because the mlua flavors' features can't unify in a single build. `wasmtime` is pinned to 49 because 50 needs rustc 1.97.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
