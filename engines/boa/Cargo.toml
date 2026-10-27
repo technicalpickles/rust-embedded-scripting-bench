@@ -1,0 +1,8 @@
+[package]
+name = "e_boa"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+boa_engine = "0.22.0"

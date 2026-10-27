@@ -1,0 +1,11 @@
+[package]
+name = "e_wasmi"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+wasmi = "2.0.0"
+
+[build-dependencies]
+wat = "1.262.0"

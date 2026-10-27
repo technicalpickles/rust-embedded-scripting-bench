@@ -1,0 +1,8 @@
+[package]
+name = "e_rquickjs"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+rquickjs = "0.14.0"

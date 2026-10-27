@@ -1,0 +1,8 @@
+[package]
+name = "e_koto"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+koto = "0.16.1"

@@ -1,0 +1,6 @@
+// `add` is a host (Rust) function installed via a rune::Module.
+pub fn fib(n) { if n < 2 { n } else { fib(n - 1) + fib(n - 2) } }
+pub fn loop_sum(n) { let s = 0; for i in 0..n { s += i; } s }
+pub fn str_build(n) { let s = String::new(); for i in 0..n { s.push_str(i.to_string()); } s.len() }
+pub fn host_loop(n) { let acc = 0; for i in 0..n { acc = add(acc, 1); } acc }
+pub fn inc(x) { x + 1 }

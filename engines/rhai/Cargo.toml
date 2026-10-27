@@ -1,0 +1,8 @@
+[package]
+name = "e_rhai"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+rhai = "1.27.0"

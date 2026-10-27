@@ -1,0 +1,9 @@
+[package]
+name = "e_starlark"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+starlark = "0.14.2"
+anyhow = "1"

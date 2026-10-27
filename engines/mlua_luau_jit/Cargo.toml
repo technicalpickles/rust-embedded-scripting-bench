@@ -1,0 +1,8 @@
+[package]
+name = "mlua_luau_jit"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+mlua = { version = "0.12.2", features = ["luau-jit", "vendored"] }

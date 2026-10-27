@@ -1,0 +1,12 @@
+;; Steel (Scheme). `add` is a host (Rust) function registered with register_fn.
+(define (fib n) (if (< n 2) n (+ (fib (- n 1)) (fib (- n 2)))))
+(define (loop-sum n)
+  (let loop ([i 0] [s 0]) (if (< i n) (loop (+ i 1) (+ s i)) s)))
+(define (str-build n)
+  (let loop ([i 0] [acc '()])
+    (if (< i n)
+        (loop (+ i 1) (cons (number->string i) acc))
+        (string-length (apply string-append (reverse acc))))))
+(define (host-loop n)
+  (let loop ([i 0] [acc 0]) (if (< i n) (loop (+ i 1) (add acc 1)) acc)))
+(define (inc x) (+ x 1))

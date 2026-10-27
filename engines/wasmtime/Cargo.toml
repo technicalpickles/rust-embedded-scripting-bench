@@ -1,0 +1,11 @@
+[package]
+name = "e_wasmtime"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+wasmtime = "49"
+
+[build-dependencies]
+wat = "1.262.0"

@@ -1,0 +1,86 @@
+Benchmark 1: ./target/release/boot_native
+  Time (mean ± σ):       1.3 ms ±   0.0 ms    [User: 0.5 ms, System: 0.4 ms]
+  Range (min … max):     1.2 ms …   1.4 ms    50 runs
+ 
+Benchmark 2: ./target/release/boot_lua54
+  Time (mean ± σ):       1.4 ms ±   0.0 ms    [User: 0.7 ms, System: 0.4 ms]
+  Range (min … max):     1.4 ms …   1.5 ms    50 runs
+ 
+Benchmark 3: ./target/release/boot_lua55
+  Time (mean ± σ):       1.4 ms ±   0.0 ms    [User: 0.7 ms, System: 0.4 ms]
+  Range (min … max):     1.3 ms …   1.5 ms    50 runs
+ 
+Benchmark 4: ./target/release/boot_luajit
+  Time (mean ± σ):       1.5 ms ±   0.0 ms    [User: 0.7 ms, System: 0.4 ms]
+  Range (min … max):     1.4 ms …   1.6 ms    50 runs
+ 
+Benchmark 5: ./target/release/boot_luau
+  Time (mean ± σ):       2.1 ms ±   0.0 ms    [User: 1.2 ms, System: 0.5 ms]
+  Range (min … max):     2.1 ms …   2.2 ms    50 runs
+ 
+Benchmark 6: ./target/release/boot_luau_jit
+  Time (mean ± σ):       2.3 ms ±   0.0 ms    [User: 1.4 ms, System: 0.5 ms]
+  Range (min … max):     2.2 ms …   2.5 ms    50 runs
+ 
+Benchmark 7: ./target/release/boot_rhai
+  Time (mean ± σ):       1.6 ms ±   0.0 ms    [User: 0.7 ms, System: 0.4 ms]
+  Range (min … max):     1.5 ms …   1.7 ms    50 runs
+ 
+Benchmark 8: ./target/release/boot_rquickjs
+  Time (mean ± σ):       1.5 ms ±   0.0 ms    [User: 0.7 ms, System: 0.4 ms]
+  Range (min … max):     1.4 ms …   1.5 ms    50 runs
+ 
+Benchmark 9: ./target/release/boot_boa
+  Time (mean ± σ):       1.9 ms ±   0.0 ms    [User: 0.9 ms, System: 0.6 ms]
+  Range (min … max):     1.9 ms …   2.0 ms    50 runs
+ 
+Benchmark 10: ./target/release/boot_rune
+  Time (mean ± σ):       3.5 ms ±   0.0 ms    [User: 2.5 ms, System: 0.6 ms]
+  Range (min … max):     3.4 ms …   3.6 ms    50 runs
+ 
+Benchmark 11: ./target/release/boot_koto
+  Time (mean ± σ):       2.1 ms ±   0.1 ms    [User: 1.2 ms, System: 0.5 ms]
+  Range (min … max):     2.0 ms …   2.3 ms    50 runs
+ 
+Benchmark 12: ./target/release/boot_wasmtime
+  Time (mean ± σ):       3.1 ms ±   0.1 ms    [User: 6.2 ms, System: 5.2 ms]
+  Range (min … max):     2.7 ms …   3.3 ms    50 runs
+ 
+Benchmark 13: ./target/release/boot_wasmi
+  Time (mean ± σ):       1.3 ms ±   0.1 ms    [User: 0.6 ms, System: 0.4 ms]
+  Range (min … max):     1.2 ms …   1.6 ms    50 runs
+ 
+Benchmark 14: ./target/release/boot_pyo3
+  Time (mean ± σ):       7.9 ms ±   0.2 ms    [User: 5.6 ms, System: 1.6 ms]
+  Range (min … max):     7.7 ms …   8.4 ms    50 runs
+ 
+Benchmark 15: ./target/release/boot_starlark
+  Time (mean ± σ):       2.7 ms ±   0.1 ms    [User: 1.7 ms, System: 0.6 ms]
+  Range (min … max):     2.6 ms …   2.9 ms    50 runs
+ 
+Benchmark 16: ./target/release/boot_steel
+  Time (mean ± σ):      88.3 ms ±   0.8 ms    [User: 83.7 ms, System: 3.6 ms]
+  Range (min … max):    86.5 ms …  90.2 ms    50 runs
+ 
+Benchmark 17: ./target/release/boot_wasmtime_precompiled results/bench.cwasm
+  Time (mean ± σ):       1.7 ms ±   0.1 ms    [User: 0.7 ms, System: 0.5 ms]
+  Range (min … max):     1.6 ms …   1.9 ms    50 runs
+ 
+Summary
+  ./target/release/boot_native ran
+    1.06 ± 0.06 times faster than ./target/release/boot_wasmi
+    1.13 ± 0.05 times faster than ./target/release/boot_lua55
+    1.14 ± 0.05 times faster than ./target/release/boot_lua54
+    1.16 ± 0.05 times faster than ./target/release/boot_rquickjs
+    1.21 ± 0.05 times faster than ./target/release/boot_luajit
+    1.26 ± 0.06 times faster than ./target/release/boot_rhai
+    1.33 ± 0.07 times faster than ./target/release/boot_wasmtime_precompiled results/bench.cwasm
+    1.52 ± 0.07 times faster than ./target/release/boot_boa
+    1.69 ± 0.07 times faster than ./target/release/boot_luau
+    1.71 ± 0.08 times faster than ./target/release/boot_koto
+    1.87 ± 0.08 times faster than ./target/release/boot_luau_jit
+    2.16 ± 0.09 times faster than ./target/release/boot_starlark
+    2.44 ± 0.14 times faster than ./target/release/boot_wasmtime
+    2.77 ± 0.11 times faster than ./target/release/boot_rune
+    6.33 ± 0.27 times faster than ./target/release/boot_pyo3
+   70.44 ± 2.77 times faster than ./target/release/boot_steel

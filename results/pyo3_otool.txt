@@ -1,0 +1,4 @@
+target/release/boot_pyo3:
+	@rpath/libpython3.13.dylib (compatibility version 3.13.0, current version 3.13.0)
+	/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)

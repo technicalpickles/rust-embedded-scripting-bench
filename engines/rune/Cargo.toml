@@ -1,0 +1,8 @@
+[package]
+name = "e_rune"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+rune = "0.14.2"

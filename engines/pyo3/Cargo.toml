@@ -1,0 +1,8 @@
+[package]
+name = "e_pyo3"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+harness = { path = "../../harness" }
+pyo3 = { version = "0.30.1", features = ["auto-initialize"] }

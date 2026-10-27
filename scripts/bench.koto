@@ -1,0 +1,23 @@
+# `add` is a host (Rust) function inserted into the prelude.
+export fib = |n|
+  if n < 2 then n else fib(n - 1) + fib(n - 2)
+
+export loop_sum = |n|
+  s = 0
+  for i in 0..n
+    s += i
+  s
+
+export str_build = |n|
+  parts = []
+  for i in 0..n
+    parts.push '{i}'
+  size (iterator.to_string parts)
+
+export host_loop = |n|
+  acc = 0
+  for i in 0..n
+    acc = add acc, 1
+  acc
+
+export inc = |x| x + 1

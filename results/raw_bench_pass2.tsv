@@ -1,0 +1,124 @@
+== bench_native
+RESULT	native	fib	30	1.190	1.193	1.182	ms	
+RESULT	native	loop_sum	10000000	2.908	2.958	2.861	ms	
+RESULT	native	str_build	100000	0.810	0.876	0.780	ms	
+RESULT	native	host_call	1000000	0.700	0.702	0.464	ms	
+RESULT	native	call_from_rust	100000	0.069	0.072	0.069	ms	
+== bench_lua54
+RESULT	lua54	boot:new+eval	1000	19.333	21.750	18.417	us	n=iterations
+RESULT	lua54	fib	30	20.664	21.097	20.609	ms	
+RESULT	lua54	loop_sum	10000000	30.227	30.696	30.188	ms	
+RESULT	lua54	str_build	100000	7.328	8.226	6.912	ms	
+RESULT	lua54	host_call	1000000	17.813	18.073	17.721	ms	
+RESULT	lua54	call_from_rust	100000	2.181	2.193	2.170	ms	
+== bench_lua55
+RESULT	lua55	boot:new+eval	1000	23.708	27.125	22.583	us	n=iterations
+RESULT	lua55	fib	30	21.453	23.060	20.811	ms	
+RESULT	lua55	loop_sum	10000000	17.652	17.787	14.402	ms	
+RESULT	lua55	str_build	100000	7.045	8.566	6.644	ms	
+RESULT	lua55	host_call	1000000	17.383	17.952	17.351	ms	
+RESULT	lua55	call_from_rust	100000	2.120	2.158	2.111	ms	
+== bench_luajit
+RESULT	luajit	boot:new+eval	1000	60.792	65.875	58.375	us	n=iterations
+RESULT	luajit	fib	30	4.123	4.147	4.114	ms	
+RESULT	luajit	loop_sum	10000000	5.397	5.480	5.342	ms	
+RESULT	luajit	str_build	100000	1.784	5.586	1.723	ms	
+RESULT	luajit	host_call	1000000	14.689	15.108	14.215	ms	
+RESULT	luajit	call_from_rust	100000	1.714	1.720	1.705	ms	
+== bench_luau
+RESULT	luau	boot:new+eval	1000	41.209	45.792	40.208	us	n=iterations
+RESULT	luau	fib	30	35.698	36.018	35.125	ms	
+RESULT	luau	loop_sum	10000000	28.116	31.800	25.759	ms	
+RESULT	luau	str_build	100000	5.062	6.474	4.780	ms	
+RESULT	luau	host_call	1000000	22.110	23.026	21.938	ms	
+RESULT	luau	call_from_rust	100000	2.692	2.774	2.681	ms	
+== bench_luau_jit
+RESULT	luau_jit	boot:new+eval	1000	78.334	87.750	75.000	us	n=iterations
+RESULT	luau_jit	fib	30	18.045	18.090	17.674	ms	
+RESULT	luau_jit	loop_sum	10000000	30.913	30.957	30.891	ms	
+RESULT	luau_jit	str_build	100000	4.909	6.274	4.707	ms	
+RESULT	luau_jit	host_call	1000000	22.340	22.485	21.374	ms	
+RESULT	luau_jit	call_from_rust	100000	2.858	3.037	2.764	ms	
+== bench_rhai
+RESULT	rhai	boot:new+eval	1000	75.209	82.208	71.375	us	n=iterations
+RESULT	rhai	boot:new_raw+eval	1000	0.541	0.625	0.416	us	n=iterations
+RESULT	rhai	fib	30	608.196	614.492	606.537	ms	
+RESULT	rhai	loop_sum	10000000	365.520	366.194	365.118	ms	
+RESULT	rhai	str_build	100000	14.925	15.009	14.552	ms	
+RESULT	rhai	host_call	1000000	98.716	99.147	98.388	ms	
+RESULT	rhai	call_from_rust	100000	12.010	12.129	11.911	ms	
+== bench_rquickjs
+RESULT	rquickjs	boot:runtime+context_full+eval	1000	45.500	51.292	44.167	us	n=iterations
+RESULT	rquickjs	fib	30	47.505	48.435	46.945	ms	
+RESULT	rquickjs	loop_sum	10000000	124.014	124.710	122.703	ms	
+RESULT	rquickjs	str_build	100000	5.137	6.091	4.997	ms	
+RESULT	rquickjs	host_call	1000000	51.028	51.299	50.924	ms	
+RESULT	rquickjs	call_from_rust	100000	3.813	4.064	3.581	ms	
+== bench_boa
+RESULT	boa	boot:context+eval	1000	79.250	428.958	75.959	us	n=iterations
+RESULT	boa	fib	30	260.353	264.475	258.897	ms	
+RESULT	boa	loop_sum	10000000	196.299	203.010	191.036	ms	
+RESULT	boa	str_build	100000	24.898	24.949	24.191	ms	
+RESULT	boa	host_call	1000000	67.241	67.391	66.942	ms	
+RESULT	boa	call_from_rust	100000	5.655	5.663	5.478	ms	
+== bench_rune
+RESULT	rune	boot:context+compile+call	1000	1539.250	1581.708	1483.584	us	n=iterations
+RESULT	rune	boot:warm_context:compile+call	1000	6.750	7.042	6.542	us	n=iterations
+RESULT	rune	boot:context_only	1000	1445.000	1477.625	1391.917	us	n=iterations
+RESULT	rune	fib	30	88.503	88.928	88.301	ms	
+RESULT	rune	loop_sum	10000000	406.635	409.724	401.401	ms	
+RESULT	rune	str_build	100000	12.061	12.350	11.573	ms	
+RESULT	rune	host_call	1000000	47.490	47.620	47.173	ms	
+RESULT	rune	call_from_rust	100000	4.606	4.725	4.535	ms	
+== bench_koto
+RESULT	koto	boot:new+compile_and_run	1000	16.667	19.500	16.166	us	n=iterations
+RESULT	koto	fib	30	266.900	267.398	264.976	ms	
+RESULT	koto	loop_sum	10000000	277.193	277.577	274.959	ms	
+RESULT	koto	str_build	100000	17.285	17.467	17.183	ms	
+RESULT	koto	host_call	1000000	71.207	71.975	71.014	ms	
+RESULT	koto	call_from_rust	100000	7.075	7.123	7.045	ms	
+== bench_wasmtime
+INFO	wasmtime	wasm_bytes=294	cwasm_bytes=51272
+RESULT	wasmtime	boot:engine+compile+instantiate+call	1000	258.583	298.708	191.833	us	n=iterations
+RESULT	wasmtime	boot:engine+deserialize+instantiate+call	1000	15.375	22.250	14.833	us	n=iterations
+RESULT	wasmtime	boot:engine_new_only	1000	0.834	0.917	0.791	us	n=iterations
+RESULT	wasmtime	boot:warm_engine:compile+instantiate+call	1000	253.458	289.500	186.125	us	n=iterations
+RESULT	wasmtime	boot:warm_engine:deserialize+instantiate+call	1000	13.833	17.750	13.166	us	n=iterations
+RESULT	wasmtime	boot:warm_module:instantiate+call	1000	1.417	1.541	1.333	us	n=iterations
+RESULT	wasmtime	boot:warm_instance_pre:instantiate+call	1000	0.709	0.750	0.666	us	n=iterations
+RESULT	wasmtime	fib	30	3.246	3.440	2.800	ms	
+RESULT	wasmtime	loop_sum	10000000	2.492	2.505	2.488	ms	
+SKIP	wasmtime	str_build	unsupported
+RESULT	wasmtime	host_call	1000000	2.766	2.781	2.761	ms	
+RESULT	wasmtime	call_from_rust	100000	1.255	1.257	1.250	ms	
+== bench_wasmi
+RESULT	wasmi	boot:engine+compile+instantiate+call	1000	5.417	5.666	5.166	us	n=iterations
+RESULT	wasmi	boot:warm_module:instantiate+call	1000	0.750	0.792	0.666	us	n=iterations
+RESULT	wasmi	fib	30	12.424	12.775	11.968	ms	
+RESULT	wasmi	loop_sum	10000000	19.070	23.355	19.047	ms	
+SKIP	wasmi	str_build	unsupported
+RESULT	wasmi	host_call	1000000	10.168	10.520	9.927	ms	
+RESULT	wasmi	call_from_rust	100000	3.912	3.923	3.894	ms	
+== bench_pyo3
+RESULT	pyo3	boot:first_initialize+eval	1	4861.500	4861.500	4861.500	us	single sample (CPython init is once per process)
+RESULT	pyo3	boot:warm_interp_attach+eval	1000	2.084	2.292	1.958	us	interpreter already initialized; not a cold boot
+RESULT	pyo3	fib	30	52.585	52.927	51.523	ms	
+RESULT	pyo3	loop_sum	10000000	156.587	161.496	154.013	ms	
+RESULT	pyo3	str_build	100000	3.502	3.530	3.436	ms	
+RESULT	pyo3	host_call	1000000	24.163	24.191	23.674	ms	
+RESULT	pyo3	call_from_rust	100000	2.513	2.664	2.501	ms	
+== bench_starlark
+RESULT	starlark	boot:globals+parse+eval	1000	3.583	3.708	3.458	us	n=iterations
+RESULT	starlark	fib	30	65.343	65.396	64.910	ms	
+RESULT	starlark	loop_sum	10000000	171.938	175.905	170.313	ms	
+RESULT	starlark	str_build	100000	3.558	3.621	3.319	ms	
+RESULT	starlark	host_call	1000000	10.353	10.470	10.330	ms	
+RESULT	starlark	call_from_rust	100000	1.942	1.956	1.904	ms	
+== bench_steel
+RESULT	steel	boot:new+run	176	56980.292	57794.000	56447.959	us	n=iterations
+RESULT	steel	boot:new_base+run	397	25174.500	25545.625	24743.542	us	n=iterations
+RESULT	steel	fib	30	96.025	96.139	95.798	ms	
+RESULT	steel	loop_sum	10000000	439.014	452.281	430.701	ms	
+RESULT	steel	str_build	100000	19.082	19.176	18.357	ms	
+RESULT	steel	host_call	1000000	40.981	41.909	40.777	ms	
+RESULT	steel	call_from_rust	100000	7.644	7.818	7.568	ms	
